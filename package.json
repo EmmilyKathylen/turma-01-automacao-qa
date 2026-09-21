@@ -9,10 +9,11 @@
     "start": "node ."
   },
   "devDependencies": {
-    "@types/node": "^26.5.0",
+    "@types/node": "^26.6.2",
     "@types/prompt-sync": "^4.2.3",
     "tsx": "^4.23.13",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
   },
   "dependencies": {
     "prompt-sync": "^4.2.0"

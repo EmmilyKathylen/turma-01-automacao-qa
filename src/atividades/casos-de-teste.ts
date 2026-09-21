@@ -17,7 +17,7 @@ function marcarAutomatizado(caso: CasoDeTeste): CasoDeTeste {
 }
 
 
-const casoComErro = criarCasosDeTeste ("3", "Login com dados válidos", "Verificar se o usuário consegue realizar login com dados válidos", false);
+//const casoComErro = criarCasosDeTeste ("3", "Login com dados válidos", "Verificar se o usuário consegue realizar login com dados válidos", false);
 
 
 const primeiroCasoDeTeste = criarCasosDeTeste(1,"Login com dados válidos","Verificar se o usuário consegue realizar login com dados válidos.",false);

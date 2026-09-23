@@ -23,9 +23,9 @@ async function buscarPostagem(id: number): Promise<POST> {
     return resGet
 }
 
-const get = await buscarPostagem(77);
-console.log(get)
-console.log(get.title)
+// const get = await buscarPostagem(77);
+// console.log(get)
+// console.log(get.title)
 
 
 //POST: cria uma nova postagem 
@@ -63,7 +63,7 @@ async function atualizarPostagemCompleta(id: number): Promise<POST> {
     }
 
     const res = await fetch(
-     `https://jsonplaceholder.typicode.com/posts/${77}/`, {
+     `https://jsonplaceholder.typicode.com/posts/${id}/`, {
             method: "PUT", 
             headers: {
                 'Content-Type': 'application/json'
@@ -82,8 +82,8 @@ async function atualizarPostagemCompleta(id: number): Promise<POST> {
     return resPut
 
 }
-/// const put = await atualizarPostagemCompleta(77)
-/// console.log(put)
+//  const put = await atualizarPostagemCompleta(77)
+//  console.log(put)
 
 
 //DELETE
@@ -99,7 +99,7 @@ async function deletar(id: number): Promise<void> {
 
  }
 
-///deletar(77)
+// deletar(77)
 
 
 // PATCH

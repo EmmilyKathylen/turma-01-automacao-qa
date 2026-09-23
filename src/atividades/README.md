@@ -22,5 +22,4 @@ No terminal, dentro da pasta do projeto, execute:
 ```powershell
 npx tsx src/atividades/casos-de-teste.ts
 
-
-![Erro de tipo ao passar uma string onde era esperado um number](print.png)
+![Foto do erro](image.png)

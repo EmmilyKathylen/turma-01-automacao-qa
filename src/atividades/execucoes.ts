@@ -45,11 +45,15 @@ export const tempoTotal = execucoes.reduce(
   0
 );
 
-
+// Simula uma espera de 100ms, como se fosse uma requisição para uma API.
+// O await faz a função esperar essa operação terminar antes de continuar.
 export async function buscarExecucaoPorId(id: number): Promise<ExecucaoTeste> {
   await new Promise((resolve) => setTimeout(resolve, 100));
+  
+   // Procura no array uma execução que tenha o ID informado.
     const execucao = execucoes.find((execucao) => execucao.id === id);
 
+// Se nenhuma execução for encontrada, lança um erro.
   if (!execucao) {
     throw new Error(`Execução com id ${id} não encontrada`);
   }

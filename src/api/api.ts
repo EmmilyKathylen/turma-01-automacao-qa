@@ -12,7 +12,7 @@ interface POST {
 
 async function buscarPostagem(id: number): Promise<POST> {
     const res = await fetch(
-        `https://jsonplaceholder.typicode.com/posts/${id}/`
+        `https://jsonplaceholder.typicode.com/posts/${id}` 
     );
 
     console.log("STATUS:")
@@ -23,18 +23,19 @@ async function buscarPostagem(id: number): Promise<POST> {
     return resGet
 }
 
-//const get = await buscarPostagem(77);
-//console.log(get)
-//console.log(get.title)
+const get = await buscarPostagem(77);
+console.log(get)
+console.log(get.title)
+
 
 //POST: cria uma nova postagem 
 
 async function criarPostagem(): Promise<POST> {
     const res = await fetch(
-     `https://jsonplaceholder.typicode.com/posts/`, {
+     `https://jsonplaceholder.typicode.com/posts`, {
             method: "POST", 
             headers: {
-                'Content-Types': 'application/json'
+                'Content-Type': 'application/json'
              },
             body: JSON.stringify({
                 title:"Minha primeira postagem",
@@ -65,7 +66,7 @@ async function atualizarPostagemCompleta(id: number): Promise<POST> {
      `https://jsonplaceholder.typicode.com/posts/${77}/`, {
             method: "PUT", 
             headers: {
-                'Content-Types': 'application/json'
+                'Content-Type': 'application/json'
              },
             body: JSON.stringify(corpoEnviado),
         });
@@ -81,8 +82,8 @@ async function atualizarPostagemCompleta(id: number): Promise<POST> {
     return resPut
 
 }
-// const put = await atualizarPostagemCompleta(77)
-// console.log(put)
+/// const put = await atualizarPostagemCompleta(77)
+/// console.log(put)
 
 
 //DELETE
@@ -98,7 +99,7 @@ async function deletar(id: number): Promise<void> {
 
  }
 
-//deletar(77)
+///deletar(77)
 
 
 // PATCH
@@ -111,7 +112,7 @@ async function atualizaCampo(id: number): Promise<POST> {
         const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
             method:"PATCH",
             headers:  {
-                'Content-Types': 'application/json'
+                'Content-Type': 'application/json'
              },
 
              body: JSON.stringify(corpoEnviado)
@@ -129,8 +130,8 @@ async function atualizaCampo(id: number): Promise<POST> {
 
 }
 
-const patch = await atualizaCampo(56);
-console.log(patch);
-console.log(patch.title);
+// const patch = await atualizaCampo(56);
+// console.log(patch);
+// console.log(patch.title);
 
 

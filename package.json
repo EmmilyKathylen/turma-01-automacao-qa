@@ -9,6 +9,7 @@
     "start": "node ."
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^26.6.2",
     "@types/prompt-sync": "^4.2.3",
     "tsx": "^4.23.13",

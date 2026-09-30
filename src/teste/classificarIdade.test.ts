@@ -24,7 +24,7 @@ function classificarIdade(idade: number): string {
 describe("Testes para a função classificarIdade", () => {
 
     // toThrowError: verifica se a função apresenta um erro
-test("Validar idade negativa", () => {
+test("Verificar idade negativa", () => {
         expect(() => classificarIdade(-1)).toThrowError("Idade inválida");
     });
 
